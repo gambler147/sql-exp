@@ -1,5 +1,5 @@
 # sql-exp
-Experiments on sql commands. This program is an experiment for comparing the speed of inserting multiple records into sql database.
+Experiments on sql commands. This program is an experiment for comparing the speed of inserting multiple records into sql database. It creates random integers for specified size and will try to connect with database and table. Please make sure configured table and database are not important because it will drop and create the same table repeatedly.
 
 ## Config
 You need to add `config.json` in current directory and specify the mysql configurations
