@@ -23,10 +23,11 @@ def multipleSingleInsertionWithOneQuery(conn, table, data):
   io, call cursor.execute function once
   """
   cursor = conn.cursor()
-  query = ""
+  query = []
   for d in data:
     values = "(" + ",".join(map(str, d)) + ")"
-    query += "INSERT INTO {} VALUES {};".format(table, values)
+    query.append("INSERT INTO {} VALUES {};".format(table, values))
+  query = ''.join(query)
   cursor.execute(query, multi=True)
   conn.commit()
 
